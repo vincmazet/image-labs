@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Denoising &#8212; BIP Labs</title>
   
@@ -28,14 +29,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=109105fe" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css?v=75a65ca2" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,22 +44,20 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=ff8fa330"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=bcf87968"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab61';</script>
@@ -174,7 +173,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Foreword
+                    BIP Labs
                 </a>
             </li>
         </ul>
@@ -392,12 +391,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="denoising">
-<span id="p-lab61"></span><h1>Denoising<a class="headerlink" href="#denoising" title="Link to this heading">#</a></h1>
+<span id="p-lab61"></span><h1>Denoising<a class="headerlink" href="#denoising" title="Permalink to this heading">#</a></h1>
 <p>This exercise is intended to evaluate the performances of the denoising method of your choice.
 Therefore it is essential to have an image corrupted by noise and the same image without noise
 to be able to compare the denoising method with the actual image.</p>
 <section id="creation-of-a-noisy-image">
-<h2>Creation of a noisy image<a class="headerlink" href="#creation-of-a-noisy-image" title="Link to this heading">#</a></h2>
+<h2>Creation of a noisy image<a class="headerlink" href="#creation-of-a-noisy-image" title="Permalink to this heading">#</a></h2>
 <ul>
 <li><p>Recall the mathematical definition of SNR.</p></li>
 <li><p>Express the power of the noise in terms of SNR.</p></li>
@@ -421,7 +420,7 @@ On the contrary, the image should be difficult to discern below 0 dB.</p></li>
 </ul>
 </section>
 <section id="denoising-the-noisy-image">
-<h2>Denoising the noisy image<a class="headerlink" href="#denoising-the-noisy-image" title="Link to this heading">#</a></h2>
+<h2>Denoising the noisy image<a class="headerlink" href="#denoising-the-noisy-image" title="Permalink to this heading">#</a></h2>
 <p>Now that you dispose of a noisy image and its noiseless version,
 you can implement the denoising method.</p>
 <ul class="simple">
@@ -445,7 +444,7 @@ Can you adjust the parameter by knowing the SNR of the image?</p></li>
 </div>
 </section>
 <section id="correction">
-<h2>Correction<a class="headerlink" href="#correction" title="Link to this heading">#</a></h2>
+<h2>Correction<a class="headerlink" href="#correction" title="Permalink to this heading">#</a></h2>
 <p>The objectives of this exercise are:</p>
 <ul class="simple">
 <li><p>to apply a white Gaussian noise with a specific SNR on an image</p></li>
@@ -458,7 +457,7 @@ Can you adjust the parameter by knowing the SNR of the image?</p></li>
 <div class="cell tag_remove-input docutils container">
 </div>
 <section id="original-image-and-noisy-image">
-<h3>Original image and noisy image<a class="headerlink" href="#original-image-and-noisy-image" title="Link to this heading">#</a></h3>
+<h3>Original image and noisy image<a class="headerlink" href="#original-image-and-noisy-image" title="Permalink to this heading">#</a></h3>
 <p>The original image:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -500,7 +499,7 @@ This makes sense since, in the definition of SNR, the noise power is in the deno
 In addition, the noise becomes almost invisible beyond 30 dB, while it is very high and the image is hardly visible below 0 dB.</p>
 </section>
 <section id="mean-filter">
-<h3>Mean filter<a class="headerlink" href="#mean-filter" title="Link to this heading">#</a></h3>
+<h3>Mean filter<a class="headerlink" href="#mean-filter" title="Permalink to this heading">#</a></h3>
 <p>I choose the image whose SNR equals 10 dB, and I apply a mean filter.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -538,7 +537,7 @@ We observe that the curve has a minimum, it corresponds to the best choice for <
 The value obtained here depends on the image (try with another image!).</p>
 </section>
 <section id="tv-denoising">
-<h3>TV denoising<a class="headerlink" href="#tv-denoising" title="Link to this heading">#</a></h3>
+<h3>TV denoising<a class="headerlink" href="#tv-denoising" title="Permalink to this heading">#</a></h3>
 <p>With the noisy image at SNR = 10 dB, we now carry out a denoising by TV regularization.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -564,7 +563,7 @@ So we want to conclude that TV regularization is more efficient than the mean fi
 But beware: this conclusion is partial, because it was only obtained on <em>one</em> image with <em>one</em> SNR.</p>
 </section>
 <section id="comparison-of-the-two-denoising-methods-for-different-snrs">
-<h3>Comparison of the two denoising methods for different SNRs<a class="headerlink" href="#comparison-of-the-two-denoising-methods-for-different-snrs" title="Link to this heading">#</a></h3>
+<h3>Comparison of the two denoising methods for different SNRs<a class="headerlink" href="#comparison-of-the-two-denoising-methods-for-different-snrs" title="Permalink to this heading">#</a></h3>
 <p>It is possible to analyze the evolution of the MSE with respect to the noise level by calculating, for several values of SNR,
 the best parameters for the two methods.</p>
 <p>Then we can represent the evolution of the MSE for the two methods:</p>

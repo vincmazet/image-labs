@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Convolution &#8212; BIP Labs</title>
   
@@ -28,14 +29,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=109105fe" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css?v=75a65ca2" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,22 +44,20 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=ff8fa330"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=bcf87968"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab21';</script>
@@ -174,7 +173,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Foreword
+                    BIP Labs
                 </a>
             </li>
         </ul>
@@ -389,7 +388,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="convolution">
-<span id="p-lab21"></span><h1>Convolution<a class="headerlink" href="#convolution" title="Link to this heading">#</a></h1>
+<span id="p-lab21"></span><h1>Convolution<a class="headerlink" href="#convolution" title="Permalink to this heading">#</a></h1>
 <p>The image <a href="../_static/data/smiley.png">smiley.png</a> will be convolved with several PSF.
 Before applying the convolutions, you need to convert the image into float (<code class="docutils literal notranslate"><span class="pre">skimage.img_as_float</span></code>).</p>
 <div class="admonition note">
@@ -397,7 +396,7 @@ Before applying the convolutions, you need to convert the image into float (<cod
 <p>It can be very useful for analyzing the results to display the colorbar alongside each image.
 You can follow the code below
 (<code class="docutils literal notranslate"><span class="pre">img</span></code> is the image to show):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s2">&quot;gray&quot;</span><span class="p">)</span>
@@ -428,16 +427,16 @@ We stress that <span class="math notranslate nohighlight">\(h\)</span> being an 
 <div class="correction docutils">
 </div>
 <section id="correction">
-<h2>Correction<a class="headerlink" href="#correction" title="Link to this heading">#</a></h2>
+<h2>Correction<a class="headerlink" href="#correction" title="Permalink to this heading">#</a></h2>
 <section id="objectives">
-<h3>Objectives<a class="headerlink" href="#objectives" title="Link to this heading">#</a></h3>
+<h3>Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>know how to use the function <code class="docutils literal notranslate"><span class="pre">scipy.ndimage.convolve</span></code> to apply the convolution product</p></li>
 <li><p>be able to identify the kernel applied on a convolved image</p></li>
 </ul>
 </section>
 <section id="the-point-spread-functions">
-<h3>The point spread functions<a class="headerlink" href="#the-point-spread-functions" title="Link to this heading">#</a></h3>
+<h3>The point spread functions<a class="headerlink" href="#the-point-spread-functions" title="Permalink to this heading">#</a></h3>
 <p>Before convolving the image by the different filters, it is interesting to display the filters themselves.
 In case there is no explicit matrix to represent a filter, as with the Gaussian filter <code class="docutils literal notranslate"><span class="pre">skimage.filters.gaussian</span></code>,
 we can simply convolve the filter by an image containing only one non-zero pixel.
@@ -461,7 +460,7 @@ Indeed, this image is equivalent to a Dirac pulse <span class="math notranslate 
 </div>
 </section>
 <section id="the-convolutions">
-<h3>The convolutions<a class="headerlink" href="#the-convolutions" title="Link to this heading">#</a></h3>
+<h3>The convolutions<a class="headerlink" href="#the-convolutions" title="Permalink to this heading">#</a></h3>
 <p>The results of the convolutions are shown below, for both the “Dirac pulse” (first row) and the smiley (second row).</p>
 <div class="cell tag_remove-input docutils container">
 </div>

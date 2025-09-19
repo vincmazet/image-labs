@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Lossy compression &#8212; BIP Labs</title>
   
@@ -28,14 +29,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=109105fe" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css?v=75a65ca2" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,22 +44,20 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=ff8fa330"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=bcf87968"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab31';</script>
@@ -174,7 +173,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Foreword
+                    BIP Labs
                 </a>
             </li>
         </ul>
@@ -391,7 +390,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lossy-compression">
-<span id="p-lab31"></span><h1>Lossy compression<a class="headerlink" href="#lossy-compression" title="Link to this heading">#</a></h1>
+<span id="p-lab31"></span><h1>Lossy compression<a class="headerlink" href="#lossy-compression" title="Permalink to this heading">#</a></h1>
 <p>The heart of JPEG compression is to save the low-frequency coefficients of the discrete cosine transform (DCT) of the image with low precision.
 In this exercise, a simplified version of JPEG compression is implemented
 by cancelling the DCT pixels located outside a certain frequency.</p>
@@ -416,9 +415,9 @@ You can use the function <code class="docutils literal notranslate"><span class=
 <div class="correction docutils">
 </div>
 <section id="correction">
-<h2>Correction<a class="headerlink" href="#correction" title="Link to this heading">#</a></h2>
+<h2>Correction<a class="headerlink" href="#correction" title="Permalink to this heading">#</a></h2>
 <section id="objectives">
-<h3>Objectives<a class="headerlink" href="#objectives" title="Link to this heading">#</a></h3>
+<h3>Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>know how to implement the basic principle of JPEG compression</p></li>
 <li><p>use the discrete cosine transform</p></li>
@@ -426,7 +425,7 @@ You can use the function <code class="docutils literal notranslate"><span class=
 </ul>
 </section>
 <section id="images-of-the-dct-basis">
-<h3>Images of the DCT basis<a class="headerlink" href="#images-of-the-dct-basis" title="Link to this heading">#</a></h3>
+<h3>Images of the DCT basis<a class="headerlink" href="#images-of-the-dct-basis" title="Permalink to this heading">#</a></h3>
 <p>First of all, it is interesting to view the elements of the DCT basis.</p>
 <p>Since the images of the base correspond to a single non-zero coefficient in the domain of the transform,
 a solution to display these images is to create images that are zero in the domain of the transform, except in a single pixel.
@@ -444,7 +443,7 @@ Conversely, the pixel at the bottom right is the very high frequency component:
 the intensity of the pixels changes very quickly in the image.</p>
 </section>
 <section id="application-of-the-jpeg-principle">
-<h3>Application of the JPEG principle<a class="headerlink" href="#application-of-the-jpeg-principle" title="Link to this heading">#</a></h3>
+<h3>Application of the JPEG principle<a class="headerlink" href="#application-of-the-jpeg-principle" title="Permalink to this heading">#</a></h3>
 <p>Unlike the Fourier transform which decomposes an image as complex exponentials, the DCT decomposes an image as real cosines.
 Therefore the result is not complex; there is no need to display modulus and phase.
 Yet, the zero frequency coefficient being much greater than the others,
@@ -479,7 +478,7 @@ This makes sense since it is precisely these high frequencies that have been can
 <p>JPEG compression plays on the fact that the human eye is not sensitive to these high-frequency changes.</p>
 </section>
 <section id="mse-evolution">
-<h3>MSE evolution<a class="headerlink" href="#mse-evolution" title="Link to this heading">#</a></h3>
+<h3>MSE evolution<a class="headerlink" href="#mse-evolution" title="Permalink to this heading">#</a></h3>
 <p>The previous procedure is now used with different size of the mask,
 in order to calculate the MSE between the compressed image and the original image.
 The PSNR is also indicated, it is a measure that we will see in a future course.</p>
@@ -499,7 +498,7 @@ so the MSE decreases.</p></li>
 <p>In classic JPEG compression, the DCT is not directly calculated on the whole image, but on 8 × 8 size thumbnails, as is done below.</p>
 </section>
 <section id="compression-on-88-sub-images">
-<h3>Compression on 8×8 sub-images<a class="headerlink" href="#compression-on-88-sub-images" title="Link to this heading">#</a></h3>
+<h3>Compression on 8×8 sub-images<a class="headerlink" href="#compression-on-88-sub-images" title="Permalink to this heading">#</a></h3>
 <p>The image is divided into blocks of 8×8 pixels, then the DCT is computed on each block,
 and finally, the high frequencies of each DCT are cancelled.
 The blocking effect is clearly visible when the compression is too strong.</p>

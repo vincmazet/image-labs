@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Setting the intensity range &#8212; BIP Labs</title>
   
@@ -28,14 +29,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=109105fe" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css?v=75a65ca2" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,22 +44,20 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=ff8fa330"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=bcf87968"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab15';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -172,7 +171,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Foreword
+                    BIP Labs
                 </a>
             </li>
         </ul>
@@ -387,9 +386,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="setting-the-intensity-range">
-<span id="p-lab15"></span><h1>Setting the intensity range<a class="headerlink" href="#setting-the-intensity-range" title="Link to this heading">#</a></h1>
+<span id="p-lab15"></span><h1>Setting the intensity range<a class="headerlink" href="#setting-the-intensity-range" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Display the image <a href="../_static/data/hdfs.tiff">hdfs.tiff</a>, corresponding to a part of the sky in the southern hemisphere.
+<li><p>Display the image <a class="reference download internal" download="" href="_downloads/2d55b785558eb75dccf4089b7d830e45/hdfs.tiff"><span class="xref download myst">hdfs.tiff</span></a>, corresponding to a part of the sky in the southern hemisphere.
 You should only observe a single star.</p></li>
 <li><p>What is the dynamic of this image (<em>i.e.</em> the minimum and maximum values of the intensities)?</p></li>
 <li><p>Sketch (on a paper) how would be the histogram of the image.</p></li>
@@ -400,11 +399,11 @@ to observe other objects, most of them being galaxies.</p></li>
 <div class="correction docutils">
 </div>
 <section id="correction">
-<h2>Correction<a class="headerlink" href="#correction" title="Link to this heading">#</a></h2>
+<h2>Correction<a class="headerlink" href="#correction" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 </div>
 <section id="display-the-image">
-<h3>Display the image<a class="headerlink" href="#display-the-image" title="Link to this heading">#</a></h3>
+<h3>Display the image<a class="headerlink" href="#display-the-image" title="Permalink to this heading">#</a></h3>
 <p>Load and display the image:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -422,7 +421,7 @@ to observe other objects, most of them being galaxies.</p></li>
 <p>This image corresponds to a portion of the sky in the southern hemisphere called the <a class="reference external" href="http://muse-vlt.eu/science/hdfs-v1-0/"><em>Hubble Deep Field South</em></a>. It was acquired by the <a class="reference external" href="http://muse-vlt.eu/science/">MUSE sensor</a> installed on the VLT in Chile. It is obtained by averaging around 4000 bands of the original image: we speak of a hyperspectral image (source: <a class="reference external" href="https://www.aanda.org/articles/aa/abs/2015/03/aa25419-14/aa25419-14.html">Bacon et al., “The MUSE 3D view of the Hubble Deep Field South”, <em>Astronomy &amp; Astrophysics</em>, 2015</a>).</p>
 </section>
 <section id="sketch-the-histogram">
-<h3>Sketch the histogram<a class="headerlink" href="#sketch-the-histogram" title="Link to this heading">#</a></h3>
+<h3>Sketch the histogram<a class="headerlink" href="#sketch-the-histogram" title="Permalink to this heading">#</a></h3>
 <p>Although only a small star can be seen, there are many other astronommimcal objects. Since these objects are very distant, they are very faint. In astronomy, as in many other science fields, the pixel intensity is not limited to 256 values. In this case, the intensities lie over the range given below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -449,7 +448,7 @@ Thus, the colormap is expected to be somewhere around the red area.</p>
 </div>
 </section>
 <section id="choose-a-better-colormap">
-<h3>Choose a better colormap<a class="headerlink" href="#choose-a-better-colormap" title="Link to this heading">#</a></h3>
+<h3>Choose a better colormap<a class="headerlink" href="#choose-a-better-colormap" title="Permalink to this heading">#</a></h3>
 <p>Therefore, to observe the other objects, we will adjust the colormap so that the gray levels will lie between <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code>.
 Intensities less than <code class="docutils literal notranslate"><span class="pre">vmin</span></code> will be displayed in black,
 intensities greater than <code class="docutils literal notranslate"><span class="pre">vmax</span></code> will be displayed in white,

@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Contrast enhancement &#8212; BIP Labs</title>
   
@@ -28,14 +29,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=109105fe" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css?v=75a65ca2" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,22 +44,20 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=ff8fa330"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=bcf87968"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab17';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -172,7 +171,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Foreword
+                    BIP Labs
                 </a>
             </li>
         </ul>
@@ -387,9 +386,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="contrast-enhancement">
-<span id="p-lab17"></span><h1>Contrast enhancement<a class="headerlink" href="#contrast-enhancement" title="Link to this heading">#</a></h1>
+<span id="p-lab17"></span><h1>Contrast enhancement<a class="headerlink" href="#contrast-enhancement" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Display the image <a href="../_static/data/haze.png">haze.png</a>, after converting it to grayscale.</p></li>
+<li><p>Display the image <a class="reference download internal" download="" href="_downloads/b731cb923473481c7276538b994061c8/haze.png"><span class="xref download myst">haze.png</span></a>, after converting it to grayscale.</p></li>
 <li><p>Display its histogram.
 You will notice that the image is not very contrasted: what does that imply on the histogram?</p></li>
 <li><p>Multiply the image by a positive real: what happens on the image and its histogram?
@@ -412,9 +411,9 @@ Do you achieve the exercise goal?</p></li>
 <!-- Exo supplémentaire : représenter l'histogramme d'une image simple 4x4. --><div class="correction docutils">
 </div>
 <section id="correction">
-<h2>Correction<a class="headerlink" href="#correction" title="Link to this heading">#</a></h2>
+<h2>Correction<a class="headerlink" href="#correction" title="Permalink to this heading">#</a></h2>
 <section id="objective">
-<h3>Objective<a class="headerlink" href="#objective" title="Link to this heading">#</a></h3>
+<h3>Objective<a class="headerlink" href="#objective" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Apply histogram transformations</p></li>
 </ul>
@@ -445,7 +444,7 @@ However, there are few pixels with low or high intensities, explaining the lack 
 <p>Thus, what is the effect on this image of a histogram spread?</p>
 </section>
 <section id="multiplication-by-a-real">
-<h3>Multiplication by a real<a class="headerlink" href="#multiplication-by-a-real" title="Link to this heading">#</a></h3>
+<h3>Multiplication by a real<a class="headerlink" href="#multiplication-by-a-real" title="Permalink to this heading">#</a></h3>
 <p>By multiplying the intensities by a coefficient (here: 1.3), the histogram is dilated: low intensities stay weak while high intensities increase.
 Therefore the image is lighter, but the dark areas are little changed.
 As a result, the contrast is better.
@@ -458,7 +457,7 @@ Note that the two images are represented with intensities between 0 (<code class
 </div>
 </section>
 <section id="histogram-equalization">
-<h3>Histogram equalization<a class="headerlink" href="#histogram-equalization" title="Link to this heading">#</a></h3>
+<h3>Histogram equalization<a class="headerlink" href="#histogram-equalization" title="Permalink to this heading">#</a></h3>
 <p>The histogram equalization gives the result below.
 The image is more contrasted than previously: this is due to the fact that the histogram of the transformed image is (almost) flat.</p>
 <div class="cell tag_remove-input docutils container">

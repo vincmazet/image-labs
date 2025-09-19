@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Sobel and Canny detectors &#8212; BIP Labs</title>
   
@@ -28,14 +29,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=109105fe" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css?v=75a65ca2" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,22 +44,20 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=ff8fa330"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=bcf87968"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab71';</script>
@@ -174,7 +173,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Foreword
+                    BIP Labs
                 </a>
             </li>
         </ul>
@@ -394,7 +393,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sobel-and-canny-detectors">
-<span id="p-lab71"></span><h1>Sobel and Canny detectors<a class="headerlink" href="#sobel-and-canny-detectors" title="Link to this heading">#</a></h1>
+<span id="p-lab71"></span><h1>Sobel and Canny detectors<a class="headerlink" href="#sobel-and-canny-detectors" title="Permalink to this heading">#</a></h1>
 <p>This lab and the two next are devoted to metrology, by detecting features on the image <a href="../_static/data/L.png">L.png</a>.</p>
 <ul class="simple">
 <li><p>Recall what the following detectors can do: Canny, Harris, Hough, Moravec, Prewitt, Roberts, Sobel.</p></li>
@@ -415,7 +414,7 @@ What is the fastest method?</p></li>
 <div class="correction docutils">
 </div>
 <section id="correction">
-<h2>Correction<a class="headerlink" href="#correction" title="Link to this heading">#</a></h2>
+<h2>Correction<a class="headerlink" href="#correction" title="Permalink to this heading">#</a></h2>
 <p>The objectives of this exercise are to:</p>
 <ul class="simple">
 <li><p>detect edges using Sobel and Canny detectors</p></li>
@@ -430,7 +429,7 @@ What is the fastest method?</p></li>
 </div>
 </div>
 <section id="sobel-detector">
-<h3>Sobel detector<a class="headerlink" href="#sobel-detector" title="Link to this heading">#</a></h3>
+<h3>Sobel detector<a class="headerlink" href="#sobel-detector" title="Permalink to this heading">#</a></h3>
 <p>The Sobel detector performs a convolution of the image by two filters,
 each allowing to obtain the gradient of the image in the two dimensions.
 These two gradients can be merged to result in the right image (how are they merged?).</p>
@@ -459,7 +458,7 @@ they have a width of several pixels, which implies that the edge, although detec
 </ul>
 </section>
 <section id="canny-detector">
-<h3>Canny detector<a class="headerlink" href="#canny-detector" title="Link to this heading">#</a></h3>
+<h3>Canny detector<a class="headerlink" href="#canny-detector" title="Permalink to this heading">#</a></h3>
 <p>Canny detector is more complex than a simple filtering.
 It includes in particular a thresholding by hysteresis, <em>i.e.</em> a decision based on two thresholds <span class="math notranslate nohighlight">\(T_{low}\)</span> and <span class="math notranslate nohighlight">\(T_{high}\)</span>:</p>
 <ul class="simple">
@@ -469,7 +468,7 @@ It includes in particular a thresholding by hysteresis, <em>i.e.</em> a decision
 if and only if they are neighbors of pixels whic are edges.</p></li>
 </ul>
 <section id="influence-of-the-gaussian-standard-deviation-sigma">
-<h4>Influence of the Gaussian standard deviation (<code class="docutils literal notranslate"><span class="pre">sigma</span></code>)<a class="headerlink" href="#influence-of-the-gaussian-standard-deviation-sigma" title="Link to this heading">#</a></h4>
+<h4>Influence of the Gaussian standard deviation (<code class="docutils literal notranslate"><span class="pre">sigma</span></code>)<a class="headerlink" href="#influence-of-the-gaussian-standard-deviation-sigma" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/cea2f38d25d57883ed01885f48a7a6e6f9f92180e82d278d20dc9d1d2a526cd6.png" src="_images/cea2f38d25d57883ed01885f48a7a6e6f9f92180e82d278d20dc9d1d2a526cd6.png" />
@@ -481,7 +480,7 @@ This can be explained by the fact that the first step of the Canny detector is a
 In consequence, the image is more blurry and therefore the edges are less marked: they are therefore more difficult to detect.</p>
 </section>
 <section id="influence-of-t-low-low-threshold">
-<h4>Influence of <span class="math notranslate nohighlight">\(T_{low}\)</span> (<code class="docutils literal notranslate"><span class="pre">low_threshold</span></code>)<a class="headerlink" href="#influence-of-t-low-low-threshold" title="Link to this heading">#</a></h4>
+<h4>Influence of <span class="math notranslate nohighlight">\(T_{low}\)</span> (<code class="docutils literal notranslate"><span class="pre">low_threshold</span></code>)<a class="headerlink" href="#influence-of-t-low-low-threshold" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/e17c89efeefb0e5b04a38336f7fb3412340be40e70b6fe5040fcbe70d0ea934e.png" src="_images/e17c89efeefb0e5b04a38336f7fb3412340be40e70b6fe5040fcbe70d0ea934e.png" />
@@ -491,7 +490,7 @@ In consequence, the image is more blurry and therefore the edges are less marked
 since there are fewer pixels whose gradient value is greater than the lower threshold.</p>
 </section>
 <section id="influence-of-t-high-high-threshold">
-<h4>Influence of <span class="math notranslate nohighlight">\(T_{high}\)</span> (<code class="docutils literal notranslate"><span class="pre">high_threshold</span></code>)<a class="headerlink" href="#influence-of-t-high-high-threshold" title="Link to this heading">#</a></h4>
+<h4>Influence of <span class="math notranslate nohighlight">\(T_{high}\)</span> (<code class="docutils literal notranslate"><span class="pre">high_threshold</span></code>)<a class="headerlink" href="#influence-of-t-high-high-threshold" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/119f3e052882b9ce8a9cfd509ddb686879a44e11323404e62af6ac2b1cc4720f.png" src="_images/119f3e052882b9ce8a9cfd509ddb686879a44e11323404e62af6ac2b1cc4720f.png" />
@@ -503,7 +502,7 @@ Besides, the Canny detector produces fine and mostly continuous contours: detect
 </section>
 </section>
 <section id="comparison-of-the-two-methods-in-terms-of-computation-time">
-<h3>Comparison of the two methods in terms of computation time<a class="headerlink" href="#comparison-of-the-two-methods-in-terms-of-computation-time" title="Link to this heading">#</a></h3>
+<h3>Comparison of the two methods in terms of computation time<a class="headerlink" href="#comparison-of-the-two-methods-in-terms-of-computation-time" title="Permalink to this heading">#</a></h3>
 <p>One of the steps of the Canny detector is to apply a Sobel filter.
 So the Canny detector is expected to be slower than the Sobel detector.
 We measure the time required for each method to detect the edges of the image.</p>
